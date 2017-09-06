@@ -2899,7 +2899,21 @@ e=n.propHooks[b]),void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&
   $(document).ready(function() {
       swipePages();
       tableToaccordion();
+
+      // fixed header height
+      headerHeight ();
   });
+
+  $(window).resize(function() {
+    // fixed header height
+      headerHeight ();
+  });
+
+  $( window ).on( "orientationchange", function( event ) {
+    // fixed header height
+      headerHeight ();
+  });
+
 
 
   // swiper for pages
@@ -2974,4 +2988,10 @@ e=n.propHooks[b]),void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&
           element.height(curHeight); // Reset to Default Height
           element.stop().animate({ height: autoHeight }, time); // Animate to Auto Height
       }
+  }
+
+
+  function headerHeight () {
+    var headerHeight = $('.header').outerHeight(true);
+    $('.header-fake').css('height', headerHeight);
   }

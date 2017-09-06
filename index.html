@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <title>Test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -21,15 +20,16 @@
     <div class="wrapper">
         <header class="header">
             <div class="heading-h1 text-center">investment news</div>
+            <div class="slider-nav">
+                <div>overview</div>
+                <div>what new</div>
+                <div>investment solutions</div>
+            </div>
         </header>
+        <div class="header-fake"></div>
         <main>
             <!-- Slider main container -->
             <div class="page-content">
-                <div class="slider-nav">
-                    <div>overview</div>
-                    <div>what new</div>
-                    <div>investment solutions</div>
-                </div>
                 <div class="slider-for">
                     <!-- Slides -->
                     <div>
@@ -104,9 +104,9 @@
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div class="content">
                         <div class="container">
-                        <h2 class="heading-h2">What the story?</h2>
+                            <h2 class="heading-h2">What the story?</h2>
                             <div class="story-content">
                                 <div class="story-item">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dolore eum, animi iste odio enim quasi, reiciendis voluptatem sapiente. Perspiciatis laboriosam eos quasi ullam pariatur, impedit adipisci ipsam nam debitis?</p>
@@ -131,16 +131,22 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">Issuer</th>
-                                            <th scope="col">Jb Research Issuer Class</th>
-                                            <th scope="col">Rating Md`ys</th>
-                                            <th scope="col">payment Rank</th>
-                                            <th scope="col">ISIN</th>
-                                            <th scope="col">Cpn</th>
-                                            <th scope="col">Maturity</th>
-                                            <th scope="col">Ask price</th>
-                                            <th scope="col">YTW</th>
-                                            <th scope="col">YAS</th>
-                                            <th scope="col">Minimum</th>
+                                            <th colspan="10">
+                                                <table>
+                                                    <tr>
+                                                        <th>Jb Research Issuer Class</th>
+                                                        <th>Rating Md`ys</th>
+                                                        <th>payment Rank</th>
+                                                        <th>ISIN</th>
+                                                        <th>Cpn</th>
+                                                        <th>Maturity</th>
+                                                        <th>Ask price</th>
+                                                        <th>YTW</th>
+                                                        <th>YAS</th>
+                                                        <th>Minimum</th>
+                                                    </tr>
+                                                </table>
+                                            </th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -152,7 +158,7 @@
                                                 <svg class="icon icon-next">
                                                     <use xlink:href="#icon-next"></use>
                                                 </svg>
-                                                Bnp paribas</td>
+                                                BNP Paribas</td>
                                             <td colspan="10" class="accordion-content">
                                                 <table>
                                                     <tr>

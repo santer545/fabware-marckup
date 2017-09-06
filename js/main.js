@@ -1,7 +1,21 @@
   $(document).ready(function() {
       swipePages();
       tableToaccordion();
+
+      // fixed header height
+      headerHeight ();
   });
+
+  $(window).resize(function() {
+    // fixed header height
+      headerHeight ();
+  });
+
+  $( window ).on( "orientationchange", function( event ) {
+    // fixed header height
+      headerHeight ();
+  });
+
 
 
   // swiper for pages
@@ -76,4 +90,10 @@
           element.height(curHeight); // Reset to Default Height
           element.stop().animate({ height: autoHeight }, time); // Animate to Auto Height
       }
+  }
+
+
+  function headerHeight () {
+    var headerHeight = $('.header').outerHeight(true);
+    $('.header-fake').css('height', headerHeight);
   }
